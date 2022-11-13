@@ -9,4 +9,4 @@ RUN CGO_ENABLED=0 go build -o grpc main.go
 FROM gcr.io/distroless/static
 LABEL "microservice.name"="grpc"
 COPY --from=build-env /app/grpc /
-CMD ["/dashboardmanager"]
+CMD ["/grpc"]
